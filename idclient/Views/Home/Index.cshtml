@@ -1,0 +1,23 @@
+﻿@{
+    ViewBag.Title = "Room Status";
+}
+
+<div class="jumbotron alert @ViewBag.Message">
+    @if (ViewBag.Message == "alert-success")
+    {
+        <h1>All Clear <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span></h1>
+        <p>Everything ok in the room!</p>
+    }
+    else
+    {
+        <h1>Intruder Alert! <span class="glyphicon glyphicon-fire" aria-hidden="true"></span></h1>
+        <p>There could be an intruder in the room, please check!</p>
+    }
+
+</div>
+
+<script language="javascript">
+setTimeout(function(){
+   window.location.reload(1);
+}, 3000);
+</script>
